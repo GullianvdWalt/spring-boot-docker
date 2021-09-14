@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Spring Boot Docker Demo</title>
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <style>
+        .container{
+            height: 80%;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-
+    <div th:insert="navbar.html :: nav"></div>
+    <main class="container">
+        <div class="row">
+            <div class="col-lg-10 my-5">
+                <h1>Home</h1>
+                <i class="fab fa-docker"></i>
+            </div>
+        </div>
+    </main>
+    <div th:insert="footer.html :: footer"></div>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script src="https://use.fontawesome.com/4f10cb8279.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@ import java.util.List;
  * Created at 09:51 on Sep, 2021
  */
 @Controller
-@RequestMapping("products")
+@RequestMapping("product")
 public class ProductController {
     private final ProductService productService;
 
@@ -27,10 +27,10 @@ public class ProductController {
 
     @GetMapping()
     public String getProductPage(){
-        return "products";
+        return "product";
     }
 
-    @PostMapping("/get-products")
+    @PostMapping("/get-product")
     public List<Product> getProducts(){
         return productService.getProducts();
     }
